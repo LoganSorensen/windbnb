@@ -140,6 +140,48 @@ html {
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm45xW4.ttf) format('truetype');
 }
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_ZpC7g4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_bZF7g4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE7g4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/mulish/v3/1Ptyg83HX_SGhgqO0yLcmjzUAuWexZNRwaA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/mulish/v3/1Ptyg83HX_SGhgqO0yLcmjzUAuWexXRWwaA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/mulish/v3/1Ptyg83HX_SGhgqO0yLcmjzUAuWexRNWwaA.ttf) format('truetype');
+}
 .rentals {
   padding: 3%;
 }
@@ -204,15 +246,16 @@ header {
   justify-content: space-between;
 }
 header .filters {
+  font-family: 'Mulish', sans-serif;
   display: flex;
   align-items: center;
-  width: 20%;
+  width: 19%;
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
   border-radius: 16px;
   font-size: 14px;
 }
 header .filters div {
-  padding: 5%;
+  padding: 5% 0;
   display: flex;
   justify-content: center;
   cursor: pointer;

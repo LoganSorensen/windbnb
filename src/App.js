@@ -1,14 +1,15 @@
+import Header from './components/header';
 import RentalCards from './components/rentalCards'
 
 import "./styles/index.css";
-import logo from "./assets/logo.png";
 
 function App() {
   return (
     <div className="App">
-      <header>
+      <Header />
+      {/* <header>
         <img src={logo} alt="windbnb logo" />
-      </header>
+      </header> */}
       <RentalCards />
     </div>
   );

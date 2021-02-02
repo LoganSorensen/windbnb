@@ -131,4 +131,107 @@ table {
 }
 html {
   font-size: 62.5%;
+  font-family: 'Montserrat', sans-serif;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm45xW4.ttf) format('truetype');
+}
+.rentals {
+  padding: 3%;
+}
+.rentals .loc-and-number {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rentals .loc-and-number h1 {
+  color: #333333;
+  font-size: 24px;
+  font-weight: 700;
+}
+.rentals .loc-and-number span {
+  color: #4f4f4f;
+  font-size: 14px;
+  font-weight: 500;
+}
+.rentals .rental-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 2%;
+}
+.rentals .rental-card {
+  width: 32%;
+  margin-bottom: 3%;
+}
+.rentals .rental-card .rental-image {
+  height: 32vh;
+  overflow: hidden;
+  border-radius: 24px;
+  margin-bottom: 3%;
+}
+.rentals .rental-card img {
+  background-color: gray;
+  width: 100%;
+}
+.rentals .rental-card .details-and-rating {
+  display: flex;
+  justify-content: space-between;
+  color: #828282;
+  font-size: 14px;
+  margin-bottom: 3%;
+}
+.rentals .rental-card .rating {
+  width: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+.rentals .rental-card i {
+  color: #eb5757;
+}
+.rentals .rental-card .rental-name {
+  color: #333333;
+  font-size: 16px;
+  font-weight: 600;
+}
+header {
+  margin: 2% 3%;
+  display: flex;
+  justify-content: space-between;
+}
+header .filters {
+  display: flex;
+  align-items: center;
+  width: 20%;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  font-size: 14px;
+}
+header .filters div {
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+header .filters .location-filter {
+  width: 45%;
+}
+header .filters .guest-filter {
+  width: 40%;
+}
+header .filters .no-selection {
+  color: #bdbdbd;
+}
+header .filters .search-btn {
+  width: 15%;
+  color: #eb5757;
+  font-size: 18px;
+}
+header .guest-filter {
+  border-left: 1px solid #f2f2f2;
+  border-right: 1px solid #f2f2f2;
 }

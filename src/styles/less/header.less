@@ -1,0 +1,44 @@
+header {
+  margin: 2% 3%;
+  display: flex;
+  justify-content: space-between;
+
+  .filters {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    font-size: 14px;
+
+    div {
+      padding: 5%;
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .location-filter {
+      width: 45%;
+    }
+
+    .guest-filter {
+      width: 40%;
+    }
+
+    .no-selection {
+        color: #bdbdbd;
+    }
+
+    .search-btn {
+      width: 15%;
+      color: @red;
+      font-size: 18px;
+    }
+  }
+
+  .guest-filter {
+    border-left: 1px solid #f2f2f2;
+    border-right: 1px solid #f2f2f2;
+  }
+}

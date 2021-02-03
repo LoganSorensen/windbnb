@@ -379,6 +379,7 @@ header .guest-filter {
   margin-bottom: 4%;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 i {
   margin-right: 1.5%;

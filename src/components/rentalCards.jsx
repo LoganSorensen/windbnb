@@ -6,7 +6,6 @@ import stays from "../data/stays.json";
 
 const RentalCards = () => {
   const [rentals, setRentals] = useState(stays);
-  console.log(rentals);
 
   return (
     <div className='rentals'>

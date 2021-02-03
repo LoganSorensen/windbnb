@@ -15,7 +15,7 @@ const RentalCard = ({ rental }) => {
           )}
         </div>
         <div className="rating">
-        <i class="fas fa-star"></i>
+        <i className="fas fa-star"></i>
           <span>{rental.rating}</span>
         </div>
       </div>

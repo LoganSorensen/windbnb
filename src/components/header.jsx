@@ -15,7 +15,7 @@ const Header = () => {
           <div className="guest-filter">Add guests</div>
         )}
         <div className="search-btn">
-          <i class="fas fa-search"></i>
+          <i className="fas fa-search"></i>
         </div>
       </div>
     </header>

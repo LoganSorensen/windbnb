@@ -1,16 +1,18 @@
 import Header from './components/header';
 import RentalCards from './components/rentalCards'
+import Filters from './components/filters';
 
 import "./styles/index.css";
 
 function App() {
   return (
     <div className="App">
+      <div className='body-blackout'></div>
+
       <Header />
-      {/* <header>
-        <img src={logo} alt="windbnb logo" />
-      </header> */}
+      <Filters />
       <RentalCards />
+      
     </div>
   );
 }

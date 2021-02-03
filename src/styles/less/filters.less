@@ -1,0 +1,141 @@
+.hidden {
+  display: none;
+}
+
+.filters-active {
+  font-family: "Mulish", sans-serif;
+  border-radius: 0;
+  background-color: white;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  padding: 3%;
+  height: 45vh;
+
+  form {
+    display: flex;
+    justify-content: space-evenly;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+
+    .input-container {
+      position: relative;
+      width: 33%;
+    }
+
+    .button-container {
+      width: 33%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    label {
+      font-size: 9px;
+      font-weight: 800;
+      color: @black;
+      text-transform: uppercase;
+      position: absolute;
+      padding-top: 2%;
+      //   margin-top: 2%;
+      padding-left: 5%;
+    }
+
+    input {
+      font-size: 14px;
+      color: @black;
+      border: none;
+      padding: 4% 5% 2%;
+      width: 100%;
+      border-radius: 16px;
+
+      &::placeholder {
+        color: #bdbdbd;
+      }
+    }
+
+    #guests-input {
+      border-radius: 0;
+      border-right: 1px solid #f2f2f2;
+      border-left: 1px solid #f2f2f2;
+    }
+
+    button {
+      font-family: "Mulish", sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      color: white;
+      background-color: @red;
+      border: none;
+      border-radius: 16px;
+      box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+      font-size: 14px;
+      font-weight: 700;
+      padding: 0 4%;
+      height: 100%;
+      width: 25%;
+      cursor: pointer;
+    }
+  }
+}
+
+.filter-options {
+  display: flex;
+}
+
+.location-options,
+.guest-options {
+  padding: 2% 1.5%;
+  width: 33%;
+}
+
+.location-option {
+  color: @dark-gray;
+  font-size: 14px;
+  margin-bottom: 4%;
+  display: flex;
+  align-items: center;
+}
+
+i {
+  margin-right: 1.5%;
+  font-size: 19px;
+}
+
+.guest-options {
+  font-size: 14px;
+  font-weight: 700;
+
+  .guest-option {
+    margin-bottom: 10%;
+  }
+
+  .guest-type {
+    margin-bottom: 1%;
+  }
+
+  .guest-age {
+    color: #bdbdbd;
+    font-weight: 400;
+  }
+
+  .number-of-guests {
+    margin-top: 2%;
+
+    span {
+      margin: 0 2.5%;
+    }
+  }
+
+  button {
+    background-color: transparent;
+    border: 1px solid @light-gray;
+    border-radius: 4px;
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
+  }
+}

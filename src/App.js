@@ -7,7 +7,7 @@ import "./styles/index.css";
 function App() {
   return (
     <div className="App">
-      <div className='body-blackout'></div>
+      <div className='body-blackout' id='body-blackout'></div>
 
       <Header />
       <Filters />

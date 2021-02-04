@@ -10,23 +10,14 @@ const Filters = () => {
 
   const locationOptions = document.querySelector(".location-options");
   const guestOptions = document.querySelector(".guest-options");
-  const locationInput = document.querySelector("#location-input")
 
-  const handleFocus = (e) => {
-    if (e.target.id === "location-input") {
-      locationOptions.style = "visibility: visible";
-    } else if (e.target.id === "guests-input") {
-      guestOptions.style = "visibility: visible";
-    }
-  };
+  let bodyBlackout = document.querySelector(".body-blackout");
+  let filtersForm = document.querySelector(".filters-active");
 
-  const handleBlur = (e) => {
-    if (e.target.id === "location-input") {
-      locationOptions.style = "visibility: hidden";
-    } else if (e.target.id === "guests-input") {
-      guestOptions.style = "visibility: hidden";
-    }
-  };
+  document.addEventListener("DOMContentLoaded", function () {
+    bodyBlackout = document.querySelector(".body-blackout");
+    filtersForm = document.querySelector(".filters-active");
+  });
 
   useEffect(() => {
     const uniqueLocations = [];
@@ -37,6 +28,17 @@ const Filters = () => {
       }
     });
   }, []);
+
+  const handleFocus = (e) => {
+    if (e.target.id === "location-input") {
+      locationOptions.style = "visibility: visible";
+      guestOptions.style = "visibility: hidden";
+
+    } else if (e.target.id === "guests-input") {
+      guestOptions.style = "visibility: visible";
+      locationOptions.style = "visibility: hidden";
+    }
+  };
 
   const addGuest = (e) => {
     if (e.target.name === "child") {
@@ -58,18 +60,25 @@ const Filters = () => {
     }
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    bodyBlackout.style = "display: none";
+    filtersForm.style = "top: -50vh";
+    document.body.classList.remove("no-scroll");
+  }
+
   return (
     <div className="filters-active">
       <form>
         <div className="input-container">
           <label htmlFor="location-input">Location</label>
           <input
+          readOnly
             type="text"
             id="location-input"
             placeholder="Select a location"
-            value={location !== null ? location : null}
+            value={location !== null ? location : ""}
             onFocus={handleFocus}
-            onBlur={handleBlur}
           />
         </div>
         <div className="input-container">
@@ -82,14 +91,13 @@ const Filters = () => {
             value={
               adultGuests + childGuests > 0
                 ? `${adultGuests + childGuests} guests`
-                : "Add guests"
+                : ""
             }
             onFocus={handleFocus}
-            onBlur={handleBlur}
           />
         </div>
         <div className="button-container">
-          <button>
+          <button onClick={handleSubmit}>
             <i className="fas fa-search"></i>Search
           </button>
         </div>

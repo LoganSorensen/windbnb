@@ -7,9 +7,26 @@ const Filters = () => {
   const [location, setLocation] = useState(null);
   const [adultGuests, setAdultGuests] = useState(0);
   const [childGuests, setChildGuests] = useState(0);
-  // const testFocus = (e) => {
-  //     console.log('testing', e.target)
-  // }
+
+  const locationOptions = document.querySelector(".location-options");
+  const guestOptions = document.querySelector(".guest-options");
+  const locationInput = document.querySelector("#location-input")
+
+  const handleFocus = (e) => {
+    if (e.target.id === "location-input") {
+      locationOptions.style = "visibility: visible";
+    } else if (e.target.id === "guests-input") {
+      guestOptions.style = "visibility: visible";
+    }
+  };
+
+  const handleBlur = (e) => {
+    if (e.target.id === "location-input") {
+      locationOptions.style = "visibility: hidden";
+    } else if (e.target.id === "guests-input") {
+      guestOptions.style = "visibility: hidden";
+    }
+  };
 
   useEffect(() => {
     const uniqueLocations = [];
@@ -20,12 +37,6 @@ const Filters = () => {
       }
     });
   }, []);
-
-  const selectLocation = (location) => {
-    //   console.log('hitting')
-    //   console.log(location)
-    setLocation(location);
-  };
 
   const addGuest = (e) => {
     if (e.target.name === "child") {
@@ -47,8 +58,6 @@ const Filters = () => {
     }
   };
 
-  console.log(rentalLocations);
-
   return (
     <div className="filters-active">
       <form>
@@ -59,12 +68,12 @@ const Filters = () => {
             id="location-input"
             placeholder="Select a location"
             value={location !== null ? location : null}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
           />
         </div>
         <div className="input-container">
           <label htmlFor="guests-input">Guests</label>
-          {/* input will display the number of guests 
-          only if a user has added them */}
           <input
             readOnly
             type="text"
@@ -75,6 +84,8 @@ const Filters = () => {
                 ? `${adultGuests + childGuests} guests`
                 : "Add guests"
             }
+            onFocus={handleFocus}
+            onBlur={handleBlur}
           />
         </div>
         <div className="button-container">
@@ -89,7 +100,7 @@ const Filters = () => {
             <div
               key={index}
               className="location-option"
-              onClick={() => selectLocation(location)}
+              onClick={() => setLocation(location)}
             >
               <i className="fas fa-map-marker-alt"></i>
               {location}

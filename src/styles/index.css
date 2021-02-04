@@ -347,6 +347,7 @@ header .guest-filter {
   border-radius: 0;
   border-right: 1px solid #f2f2f2;
   border-left: 1px solid #f2f2f2;
+  cursor: pointer;
 }
 .filters-active form button {
   font-family: "Mulish", sans-serif;
@@ -372,6 +373,7 @@ header .guest-filter {
 .guest-options {
   padding: 2% 1.5%;
   width: 33%;
+  visibility: hidden;
 }
 .location-option {
   color: #4f4f4f;

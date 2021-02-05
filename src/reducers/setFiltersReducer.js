@@ -13,11 +13,17 @@ export const setFilters = (state = initialState, action) => {
     case SET_FILTERS:
       const matchingRentals = [];
       rentals.map((rental) => {
-        if (
-          action.payload.guests <= rental.maxGuests &&
-          `${rental.city}, ${rental.country}` === action.payload.location
-        ) {
-          matchingRentals.push(rental);
+        if (action.payload.location !== null) {
+          if (
+            action.payload.guests <= rental.maxGuests &&
+            `${rental.city}, ${rental.country}` === action.payload.location
+          ) {
+            matchingRentals.push(rental);
+          }
+        } else {
+          if (action.payload.guests <= rental.maxGuests) {
+            matchingRentals.push(rental);
+          }
         }
       });
       return {

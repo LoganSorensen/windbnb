@@ -61,7 +61,6 @@ const Header = (props) => {
 };
 
 const mapStateToProps = (state) => {
-  console.log("state", state);
   return {
     location: state.setFilters.location,
     numberOfGuests: state.setFilters.numberOfGuests,

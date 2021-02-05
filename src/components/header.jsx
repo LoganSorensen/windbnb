@@ -20,13 +20,13 @@ const Header = () => {
   return (
     <header>
       <img src={logo} alt="windbnb logo" />
-      <div className="filters" onClick={handleClick}>
+      <div className="filters">
         {/* change these filters to display dynamically */}
-        <div className="location-filter">Helsinki, Finland</div>
+        <div className="location-filter"  onClick={handleClick}>Helsinki, Finland</div>
         {1 === 1 ? (
-          <div className="guest-filter no-selection">Add guests</div>
+          <div className="guest-filter no-selection" onClick={handleClick}>Add guests</div>
         ) : (
-          <div className="guest-filter">Add guests</div>
+          <div className="guest-filter" onClick={handleClick}>Add guests</div>
         )}
         <div className="search-btn">
           <i className="fas fa-search"></i>

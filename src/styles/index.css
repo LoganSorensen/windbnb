@@ -197,6 +197,7 @@ body {
   height: 100vh;
   overflow: hidden;
   padding-right: 15px;
+  position: fixed;
 }
 .rentals {
   padding: 3%;

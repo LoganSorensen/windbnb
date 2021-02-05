@@ -6,7 +6,7 @@ import thunk from "redux-thunk";
 
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import rootReducer from './reducers'
+import rootReducer from "./reducers";
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
 

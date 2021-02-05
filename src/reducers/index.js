@@ -1,9 +1,9 @@
-const initialState = {
+import { combineReducers } from "redux";
 
-}
+import { setFilters } from "./setFiltersReducer";
 
-const setFilters = (state = initialState, action) => {
+const rootReducer = combineReducers({
+  setFilters,
+});
 
-}
-
-export default setFilters;
+export default rootReducer;

@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { connect } from "react-redux";
+
+import { setFilters } from "../actions/setFiltersActions";
 
 import stays from "../data/stays.json";
 
-const Filters = () => {
+const Filters = (props) => {
   const [rentalLocations, setRentalLocations] = useState([]);
   const [location, setLocation] = useState(null);
   const [adultGuests, setAdultGuests] = useState(0);
@@ -33,7 +36,6 @@ const Filters = () => {
     if (e.target.id === "location-input") {
       locationOptions.style = "visibility: visible";
       guestOptions.style = "visibility: hidden";
-
     } else if (e.target.id === "guests-input") {
       guestOptions.style = "visibility: visible";
       locationOptions.style = "visibility: hidden";
@@ -62,10 +64,11 @@ const Filters = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    props.setFilters({ location: location, guests: adultGuests + childGuests });
     bodyBlackout.style = "display: none";
     filtersForm.style = "top: -50vh";
     document.body.classList.remove("no-scroll");
-  }
+  };
 
   return (
     <div className="filters-active">
@@ -73,7 +76,7 @@ const Filters = () => {
         <div className="input-container">
           <label htmlFor="location-input">Location</label>
           <input
-          readOnly
+            readOnly
             type="text"
             id="location-input"
             placeholder="Select a location"
@@ -148,4 +151,4 @@ const Filters = () => {
   );
 };
 
-export default Filters;
+export default connect(null, { setFilters })(Filters);

@@ -1,20 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
+import { connect } from "react-redux";
 
 import RentalCard from "./rentalCard";
 
-import stays from "../data/stays.json";
-
-const RentalCards = () => {
-  const [rentals, setRentals] = useState(stays);
-
+const RentalCards = (props) => {
   return (
-    <div className='rentals'>
-      <div className='loc-and-number'>
+    <div className="rentals">
+      <div className="loc-and-number">
         <h1>Rentals in Finland</h1>
-        <span>{rentals.length} rentals</span>
+        <span>{props.rentals.length} rentals</span>
       </div>
       <div className="rental-cards">
-        {rentals.map((rental, index) => (
+        {props.rentals.map((rental, index) => (
           <RentalCard key={index} rental={rental} />
         ))}
       </div>
@@ -22,4 +19,10 @@ const RentalCards = () => {
   );
 };
 
-export default RentalCards;
+const mapStateToProps = (state) => {
+  return {
+    rentals: state.setFilters.rentals,
+  };
+};
+
+export default connect(mapStateToProps, {})(RentalCards);

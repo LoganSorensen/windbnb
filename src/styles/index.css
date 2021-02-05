@@ -288,9 +288,12 @@ header .filters .no-selection {
   color: #bdbdbd;
 }
 header .filters .search-btn {
+  background-color: transparent;
+  border: none;
   width: 15%;
   color: #eb5757;
   font-size: 18px;
+  cursor: pointer;
 }
 header .guest-filter {
   border-left: 1px solid #f2f2f2;

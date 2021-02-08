@@ -3,6 +3,16 @@ header {
   display: flex;
   justify-content: space-between;
 
+  @media @mobile {
+    flex-direction: column;
+    margin-bottom: 3%;
+
+    img {
+      width: 30%;
+      margin-bottom: 5%;
+    }
+  }
+
   .filters {
     font-family: "Mulish", sans-serif;
     display: flex;
@@ -13,11 +23,20 @@ header {
     font-size: 14px;
     background-color: white;
 
+    @media @mobile {
+      width: 85%;
+      margin: 0 auto;
+    }
+
     div {
       padding: 5% 0;
       display: flex;
       justify-content: center;
       cursor: pointer;
+
+      @media @mobile {
+        padding: 6% 0;
+      }
     }
 
     .location-filter {

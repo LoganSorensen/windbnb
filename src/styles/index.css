@@ -207,10 +207,20 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 375px) {
+  .rentals .loc-and-number {
+    margin-bottom: 6%;
+  }
+}
 .rentals .loc-and-number h1 {
   color: #333333;
   font-size: 24px;
   font-weight: 700;
+}
+@media (max-width: 375px) {
+  .rentals .loc-and-number h1 {
+    font-size: 18px;
+  }
 }
 .rentals .loc-and-number span {
   color: #4f4f4f;
@@ -227,18 +237,11 @@ body {
   width: 32%;
   margin-bottom: 3%;
 }
-.rentals .rental-card .rental-details {
-  width: 50%;
-}
-.rentals .rental-card .superhost {
-  color: #4f4f4f;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  border: 1px solid #4f4f4f;
-  border-radius: 12px;
-  padding: 1% 2%;
-  margin-right: 2%;
+@media (max-width: 375px) {
+  .rentals .rental-card {
+    width: 100%;
+    margin-bottom: 10%;
+  }
 }
 .rentals .rental-card .rental-image {
   height: 32vh;
@@ -250,6 +253,36 @@ body {
   background-color: gray;
   width: 100%;
 }
+@media (max-width: 375px) {
+  .rentals .rental-card img {
+    height: 100%;
+  }
+}
+.rentals .rental-card .rental-details {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 375px) {
+  .rentals .rental-card .rental-details {
+    width: 90%;
+  }
+}
+.rentals .rental-card .superhost {
+  color: #4f4f4f;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 1px solid #4f4f4f;
+  border-radius: 12px;
+  padding: 1% 2%;
+  margin-right: 2%;
+}
+@media (max-width: 375px) {
+  .rentals .rental-card .superhost {
+    font-size: 10px;
+  }
+}
 .rentals .rental-card .details-and-rating {
   display: flex;
   justify-content: space-between;
@@ -257,14 +290,30 @@ body {
   font-size: 14px;
   margin-bottom: 3%;
 }
+@media (max-width: 375px) {
+  .rentals .rental-card .details-and-rating {
+    font-size: 12px;
+  }
+}
 .rentals .rental-card .rating {
   width: 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 375px) {
+  .rentals .rental-card .rating {
+    width: 15%;
+  }
+}
 .rentals .rental-card i {
   color: #eb5757;
+}
+@media (max-width: 375px) {
+  .rentals .rental-card i {
+    font-size: 14px;
+    color: rgba(235, 87, 87, 0.72);
+  }
 }
 .rentals .rental-card .rental-name {
   color: #333333;
@@ -276,6 +325,16 @@ header {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 375px) {
+  header {
+    flex-direction: column;
+    margin-bottom: 3%;
+  }
+  header img {
+    width: 30%;
+    margin-bottom: 5%;
+  }
+}
 header .filters {
   font-family: "Mulish", sans-serif;
   display: flex;
@@ -286,11 +345,22 @@ header .filters {
   font-size: 14px;
   background-color: white;
 }
+@media (max-width: 375px) {
+  header .filters {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
 header .filters div {
   padding: 5% 0;
   display: flex;
   justify-content: center;
   cursor: pointer;
+}
+@media (max-width: 375px) {
+  header .filters div {
+    padding: 6% 0;
+  }
 }
 header .filters .location-filter {
   width: 45%;
@@ -316,6 +386,27 @@ header .guest-filter {
 .hidden {
   display: none;
 }
+.filter-header {
+  display: none;
+}
+@media (max-width: 375px) {
+  .filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2%;
+  }
+  .filter-header span {
+    font-size: 12px;
+    color: #333333;
+    font-weight: 700;
+  }
+  .filter-header button {
+    background-color: transparent;
+    border: none;
+    color: #333333;
+  }
+}
 .filters-active {
   font-family: "Mulish", sans-serif;
   border-radius: 0;
@@ -329,15 +420,31 @@ header .guest-filter {
   height: 45vh;
   transition: 0.4s ease;
 }
+@media (max-width: 375px) {
+  .filters-active {
+    height: 85vh;
+    top: -85vh;
+  }
+}
 .filters-active form {
   display: flex;
   justify-content: space-evenly;
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
   border-radius: 16px;
 }
+@media (max-width: 375px) {
+  .filters-active form {
+    flex-direction: column;
+  }
+}
 .filters-active form .input-container {
   position: relative;
   width: 33%;
+}
+@media (max-width: 375px) {
+  .filters-active form .input-container {
+    width: 100%;
+  }
 }
 .filters-active form .button-container {
   width: 33%;
@@ -354,6 +461,12 @@ header .guest-filter {
   padding-top: 2%;
   padding-left: 5%;
 }
+@media (max-width: 375px) {
+  .filters-active form label {
+    padding-top: 3%;
+    padding-left: 7%;
+  }
+}
 .filters-active form input {
   font-size: 14px;
   color: #333333;
@@ -361,6 +474,11 @@ header .guest-filter {
   padding: 4% 5% 2%;
   width: 100%;
   border-radius: 16px;
+}
+@media (max-width: 375px) {
+  .filters-active form input {
+    padding: 6.5% 7% 3%;
+  }
 }
 .filters-active form input::placeholder {
   color: #bdbdbd;
@@ -371,7 +489,14 @@ header .guest-filter {
   border-left: 1px solid #f2f2f2;
   cursor: pointer;
 }
-.filters-active form button {
+@media (max-width: 375px) {
+  .filters-active form #guests-input {
+    border: none;
+    border-top: 1px solid #f2f2f2;
+    border-radius: 0 0 16px 16px;
+  }
+}
+.filters-active form .submit {
   font-family: "Mulish", sans-serif;
   display: flex;
   align-items: center;
@@ -388,14 +513,61 @@ header .guest-filter {
   width: 25%;
   cursor: pointer;
 }
+@media (max-width: 375px) {
+  .filters-active form .submit {
+    display: none;
+  }
+}
+.filters-active .submit-mobile {
+  font-family: "Mulish", sans-serif;
+  color: white;
+  background-color: rgba(235, 87, 87, 0.9);
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  width: 40%;
+  margin: 0 auto;
+  display: none;
+  padding: 5% 4%;
+  margin-top: 10%;
+}
+@media (max-width: 375px) {
+  .filters-active .submit-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.filters-active .submit-mobile i {
+  margin-right: 10%;
+  font-size: 14px;
+}
 .filter-options {
   display: flex;
+  height: 60%;
 }
 .location-options,
 .guest-options {
   padding: 2% 1.5%;
   width: 33%;
-  visibility: hidden;
+  display: none;
+}
+@media (max-width: 375px) {
+  .location-options,
+  .guest-options {
+    width: 100%;
+    margin: 5%;
+  }
+}
+.guest-options {
+  margin-left: 33%;
+}
+@media (max-width: 375px) {
+  .guest-options {
+    margin: 5%;
+  }
 }
 .location-option {
   color: #4f4f4f;
@@ -404,6 +576,11 @@ header .guest-filter {
   display: flex;
   align-items: center;
   cursor: pointer;
+}
+@media (max-width: 375px) {
+  .location-option {
+    margin-bottom: 8%;
+  }
 }
 i {
   margin-right: 1.5%;

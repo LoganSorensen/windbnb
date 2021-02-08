@@ -2,6 +2,29 @@
   display: none;
 }
 
+.filter-header {
+  display: none;
+
+  @media @mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2%;
+
+    span {
+      font-size: 12px;
+      color: #333333;
+      font-weight: 700;
+    }
+
+    button {
+      background-color: transparent;
+      border: none;
+      color: #333333;
+    }
+  }
+}
+
 .filters-active {
   font-family: "Mulish", sans-serif;
   border-radius: 0;
@@ -15,15 +38,28 @@
   height: 45vh;
   transition: 0.4s ease;
 
+  @media @mobile {
+    height: 85vh;
+    top: -85vh;
+  }
+
   form {
     display: flex;
     justify-content: space-evenly;
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
     border-radius: 16px;
 
+    @media @mobile {
+      flex-direction: column;
+    }
+
     .input-container {
       position: relative;
       width: 33%;
+
+      @media @mobile {
+        width: 100%;
+      }
     }
 
     .button-container {
@@ -41,6 +77,11 @@
       position: absolute;
       padding-top: 2%;
       padding-left: 5%;
+
+      @media @mobile {
+        padding-top: 3%;
+        padding-left: 7%;
+      }
     }
 
     input {
@@ -50,6 +91,10 @@
       padding: 4% 5% 2%;
       width: 100%;
       border-radius: 16px;
+
+      @media @mobile {
+        padding: 6.5% 7% 3%;
+      }
 
       &::placeholder {
         color: #bdbdbd;
@@ -61,9 +106,16 @@
       border-right: 1px solid #f2f2f2;
       border-left: 1px solid #f2f2f2;
       cursor: pointer;
+
+      @media @mobile {
+        border: none;
+        border-top: 1px solid #f2f2f2;
+
+        border-radius: 0 0 16px 16px;
+      }
     }
 
-    button {
+    .submit {
       font-family: "Mulish", sans-serif;
       display: flex;
       align-items: center;
@@ -79,19 +131,64 @@
       height: 100%;
       width: 25%;
       cursor: pointer;
+
+      @media @mobile {
+        display: none;
+      }
+    }
+  }
+
+  .submit-mobile {
+    font-family: "Mulish", sans-serif;
+    color: white;
+    background-color: rgba(235, 87, 87, 0.9);
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 700;
+    width: 40%;
+    margin: 0 auto;
+    display: none;
+    padding: 5% 4%;
+    margin-top: 10%;
+
+    @media @mobile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    i {
+      margin-right: 10%;
+      font-size: 14px;
     }
   }
 }
 
 .filter-options {
   display: flex;
+  height: 60%;
 }
 
 .location-options,
 .guest-options {
   padding: 2% 1.5%;
   width: 33%;
-  visibility: hidden;
+  display: none;
+
+  @media @mobile {
+    width: 100%;
+    margin: 5%;
+  }
+}
+
+.guest-options {
+  margin-left: 33%;
+
+  @media @mobile {
+    margin: 5%;
+  }
 }
 
 .location-option {
@@ -101,6 +198,10 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+
+  @media @mobile {
+    margin-bottom: 8%;
+  }
 }
 
 i {

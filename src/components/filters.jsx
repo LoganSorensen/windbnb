@@ -35,11 +35,11 @@ const Filters = (props) => {
 
   const handleFocus = (e) => {
     if (e.target.id === "location-input") {
-      locationOptions.style = "visibility: visible";
-      guestOptions.style = "visibility: hidden";
+      guestOptions.style = "display: none";
+      locationOptions.style = "display: block";
     } else if (e.target.id === "guests-input") {
-      guestOptions.style = "visibility: visible";
-      locationOptions.style = "visibility: hidden";
+      guestOptions.style = "display: block";
+      locationOptions.style = "display: none";
     }
   };
 
@@ -63,12 +63,24 @@ const Filters = (props) => {
     e.preventDefault();
     props.setFilters({ location: location, guests: adultGuests + childGuests });
     bodyBlackout.style = "display: none";
-    filtersForm.style = "top: -50vh";
+    filtersForm.style = "bottom: 0vh";
+    document.body.classList.remove("no-scroll");
+  };
+
+  const closeForm = () => {
+    bodyBlackout.style = "display: none";
+    filtersForm.style = "bottom: 0vh";
     document.body.classList.remove("no-scroll");
   };
 
   return (
     <div className="filters-active">
+      <div className="filter-header">
+        <span>Edit your search</span>
+        <button onClick={closeForm}>
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
       <form>
         <div className="input-container">
           <label htmlFor="location-input">Location</label>
@@ -97,7 +109,7 @@ const Filters = (props) => {
           />
         </div>
         <div className="button-container">
-          <button onClick={handleSubmit}>
+          <button className="submit" onClick={handleSubmit}>
             <i className="fas fa-search"></i>Search
           </button>
         </div>
@@ -144,6 +156,9 @@ const Filters = (props) => {
           </div>
         </div>
       </div>
+      <button className="submit-mobile" onClick={handleSubmit}>
+        <i className="fas fa-search"></i>Search
+      </button>
     </div>
   );
 };

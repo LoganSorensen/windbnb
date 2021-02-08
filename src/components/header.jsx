@@ -40,7 +40,7 @@ const Header = (props) => {
             {props.location}
           </div>
         )}
-        {props.numberOfGuests === null ? (
+        {props.numberOfGuests === null || props.numberOfGuests === 0 ? (
           <div className="guest-filter no-selection" onClick={handleClick}>
             Add guests
           </div>

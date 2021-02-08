@@ -8,6 +8,7 @@ const RentalCard = ({ rental }) => {
       </div>
       <div className="details-and-rating">
         <div className="rental-details">
+          {rental.superHost && <span className="superhost">Super Host</span>}
           <span>{rental.type}</span>
           {rental.beds != null && <span> . {rental.beds} beds</span>}
         </div>

@@ -25,6 +25,7 @@ export const setFilters = (state = initialState, action) => {
             matchingRentals.push(rental);
           }
         }
+        return null;
       });
       return {
         ...state,

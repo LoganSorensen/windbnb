@@ -29,6 +29,7 @@ const Filters = (props) => {
         uniqueLocations.push(`${rental.city}, ${rental.country}`);
         setRentalLocations(uniqueLocations);
       }
+      return null;
     });
   }, []);
 
@@ -52,13 +53,9 @@ const Filters = (props) => {
 
   const removeGuest = (e) => {
     if (e.target.name === "child") {
-      if (childGuests > 0) {
-        setChildGuests(childGuests - 1);
-      }
+      childGuests > 0 && setChildGuests(childGuests - 1);
     } else {
-      if (adultGuests > 0) {
-        setAdultGuests(adultGuests - 1);
-      }
+      adultGuests > 0 && setAdultGuests(adultGuests - 1);
     }
   };
 

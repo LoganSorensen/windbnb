@@ -78,7 +78,7 @@ const Filters = (props) => {
       <div className="filter-header">
         <span>Edit your search</span>
         <button onClick={closeForm}>
-          <i class="fas fa-times"></i>
+          <i className="fas fa-times"></i>
         </button>
       </div>
       <form>

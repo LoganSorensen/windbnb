@@ -278,6 +278,7 @@ body {
   border-radius: 12px;
   padding: 1% 2%;
   margin-right: 2%;
+  width: auto;
 }
 @media (max-width: 375px) {
   .rentals .rental-card .superhost {
@@ -604,6 +605,8 @@ svg {
 }
 .guest-options .number-of-guests {
   margin-top: 2%;
+  display: flex;
+  align-items: center;
 }
 .guest-options .number-of-guests span {
   margin: 0 2.5%;
@@ -611,6 +614,9 @@ svg {
 .guest-options button {
   background-color: transparent;
   border: 1px solid #828282;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 4px;
   width: 23px;
   height: 23px;

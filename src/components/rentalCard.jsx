@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 const RentalCard = ({ rental }) => {
   return (
@@ -13,7 +15,7 @@ const RentalCard = ({ rental }) => {
           {rental.beds != null && <span> . {rental.beds} beds</span>}
         </div>
         <div className="rating">
-          <i className="fas fa-star"></i>
+          <FontAwesomeIcon icon={faStar} />
           <span>{rental.rating}</span>
         </div>
       </div>

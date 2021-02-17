@@ -1,5 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 import { setFilters } from "../actions/setFiltersActions";
 
@@ -53,7 +55,7 @@ const Header = (props) => {
           </div>
         )}
         <button className="search-btn" onClick={handleSubmit}>
-          <i className="fas fa-search"></i>
+          <FontAwesomeIcon icon={faSearch} />
         </button>
       </div>
     </header>

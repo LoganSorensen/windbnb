@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faTimes,
+  faSearch,
+  faMapMarkerAlt,
+} from "@fortawesome/free-solid-svg-icons";
 
 import { setFilters } from "../actions/setFiltersActions";
 
@@ -78,7 +84,7 @@ const Filters = (props) => {
       <div className="filter-header">
         <span>Edit your search</span>
         <button onClick={closeForm}>
-          <i className="fas fa-times"></i>
+          <FontAwesomeIcon icon={faTimes} />
         </button>
       </div>
       <form>
@@ -110,7 +116,8 @@ const Filters = (props) => {
         </div>
         <div className="button-container">
           <button className="submit" onClick={handleSubmit}>
-            <i className="fas fa-search"></i>Search
+            <FontAwesomeIcon icon={faSearch} />
+            Search
           </button>
         </div>
       </form>
@@ -122,7 +129,7 @@ const Filters = (props) => {
               className="location-option"
               onClick={() => setLocation(location)}
             >
-              <i className="fas fa-map-marker-alt"></i>
+              <FontAwesomeIcon icon={faMapMarkerAlt} />
               {location}
             </div>
           ))}
@@ -157,7 +164,8 @@ const Filters = (props) => {
         </div>
       </div>
       <button className="submit-mobile" onClick={handleSubmit}>
-        <i className="fas fa-search"></i>Search
+        <FontAwesomeIcon icon={faSearch} />
+        Search
       </button>
     </div>
   );

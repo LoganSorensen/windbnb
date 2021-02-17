@@ -307,12 +307,11 @@ body {
     width: 15%;
   }
 }
-.rentals .rental-card i {
+.rentals .rental-card svg {
   color: #eb5757;
 }
 @media (max-width: 375px) {
-  .rentals .rental-card i {
-    font-size: 14px;
+  .rentals .rental-card svg {
     color: rgba(235, 87, 87, 0.72);
   }
 }
@@ -535,7 +534,6 @@ header .guest-filter {
   margin: 0 auto;
   display: none;
   padding: 5% 4%;
-  margin-top: 10%;
 }
 @media (max-width: 375px) {
   .filters-active .submit-mobile {
@@ -544,7 +542,7 @@ header .guest-filter {
     justify-content: center;
   }
 }
-.filters-active .submit-mobile i {
+.filters-active .submit-mobile svg {
   margin-right: 10%;
   font-size: 14px;
 }
@@ -586,7 +584,7 @@ header .guest-filter {
     margin-bottom: 8%;
   }
 }
-i {
+svg {
   margin-right: 1.5%;
   font-size: 19px;
 }
